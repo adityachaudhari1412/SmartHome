@@ -38,7 +38,7 @@ public class SmartHomeController {
         } else if (securityConfig.getSecurityMode().equals(SecurityMode.Normal_Mode) &&
                 currentTime.equals(Time.Day) && (envState.getSmokeLevel() > 1 || envState.getGasLevel() > 1)) {
             homeState.setWindows(Windows.Open);
-        } else if (securityConfig.getSecurityMode().equals(SecurityMode.Thief_Mode) && envState.getFireLevel() > 1 && (envState.getGasLevel() > 1 || envState.getSmokeLevel() > 1)) {
+        } else if (securityConfig.getSecurityMode().equals(SecurityMode.Thief_Mode) && envState.getFireLevel() > 1 && (envState.getGasLevel() > 1 )) {
             homeState.setLights(Lights.Emergency);
             homeState.setAlarm(Alarm.On);
             homeState.setWindows(Windows.Close);
